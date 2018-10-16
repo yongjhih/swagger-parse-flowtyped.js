@@ -1,7 +1,17 @@
 # swagger-codegen-axios-flow
 
+Put swagger.json in the folder, and generate swagger.js by the following command:
+
+```sh
+node index.js
 ```
-swagger-codegen-axios-flo <swagger.json> [dir]
+
+## Usage
+
+TODO:
+
+```sh
+swagger-codegen-axios-flow <swagger.json> [dir]
 ```
 
 ## TODO
