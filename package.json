@@ -2,7 +2,7 @@
   "name": "swagger-codegen-axios-flow",
   "version": "0.0.1",
   "description": "swagger-codegen-axios-flow",
-  "main": "lib/index.js",
+  "main": "index.js",
   "author": "Andrew Chen <yongjhih@gmail.com>",
   "license": "",
   "devDependencies": {
@@ -32,7 +32,7 @@
     "build": "yarn run -- babel -d lib src",
     "relink": "yarn build && (yarn unlink; yarn link)",
     "deploy": "yarn test && git add lib && git commit -m 'dist' && git push origin dist",
-    "start": "node lib/index.js",
+    "start": "node index.js",
     "flow-typed-install": "yarn run -- flow-typed install",
     "flow": "yarn run flow",
     "coverage": "yarn run flow-coverage-report",
@@ -47,7 +47,10 @@
     "flow-runtime-validators": "^0.17.0",
     "fs": "^0.0.1-security",
     "fs-extra": "^5.0.0",
+    "handlebars": "^4.0.12",
     "immutable": "^3.8.2",
+    "js-beautify": "^1.8.7",
+    "lodash": "^4.17.11",
     "rxjs": "^5.5.6",
     "validator": "^9.4.1"
   },
