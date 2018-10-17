@@ -20,3 +20,8 @@ swagger-codegen-axios-flow <swagger.json> [dir]
 * Support template
 * Support method name from {mehtod}{capital(path)}
 * Support rxjs instead of promise
+
+## refs
+
+* https://handlebarsjs.com/block_helpers.html
+* https://lodash.com/docs/4.17.10#filter
