@@ -2,8 +2,6 @@
 
 ## Usage
 
-TODO:
-
 ```sh
 swagger-codegen-axios-flow < swagger.json > swagger.js
 ```
