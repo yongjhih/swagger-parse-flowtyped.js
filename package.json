@@ -4,7 +4,7 @@
   "description": "swagger-codegen-axios-flow",
   "main": "index.js",
   "author": "Andrew Chen <yongjhih@gmail.com>",
-  "license": "",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
