@@ -9,25 +9,15 @@
 {{/parameters}}
  * @return Promise<{{&responseType}}> - {{&responseTypeTitle}} - {{&responseTypeDescription}}
  */
-{{&methodName}}(
-  {{#if parameters}}
-  {{#joinComma parameters}}
+{{&methodName}}({{#if parameters}}{{#joinComma parameters}}
   {{#isPathParameter}}{{&name}}: {{&flowType}}{{/isPathParameter}}
   {{#isQueryParameter}}{{&name}}: {{&flowType}}{{/isQueryParameter}}
-  {{/joinComma}}
-  {{/if}}
-): Promise<{{&responseType}}> {
-  return this._axios.{{toLowerCase method}}(`{{&_path}}`
-  {{#if isGET}}
-  {{#if queryParameters}}
-  , {
+  {{/joinComma}}{{/if}}): Promise<{{&responseType}}> {
+  return this._axios.{{toLowerCase method}}(`{{&_path}}`{{#unless isGET}}){{/unless}}{{#if isGET}}{{#if queryParameters}}, {
     param: {
       {{#queryParameters}}
       {{&name}}: {{&name}},
       {{/queryParameters}}
     }
-  }
-  {{/if}}
-  {{/if}}
-  )
+  });{{/if}}{{/if}}
 }
