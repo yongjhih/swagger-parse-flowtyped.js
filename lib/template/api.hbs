@@ -3,7 +3,9 @@
 import axios from 'axios';
 import {Axios} from 'axios';
 
-export class {{&className}} {
+{{> types }}
+
+default export class {{&className}} {
   _axios: Axios => *;
 
   constructor(baseURL: string = "{{&domain}}") {
@@ -12,5 +14,5 @@ export class {{&className}} {
     })
   }
 
-{{> methods }}
+  {{> methods }}
 }

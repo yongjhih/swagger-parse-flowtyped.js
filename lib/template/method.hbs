@@ -7,15 +7,18 @@
 {{#parameters}}
 {{^isSingleton}} * @param {{&camelCaseName}} - {{&description}}{{/isSingleton}}
 {{/parameters}}
+ * @return Promise<{{&responseType}}> - {{&responseTypeTitle}} - {{&responseTypeDescription}}
  */
 {{&methodName}}(
   {{#if parameters}}
   {{#parameters}}
   {{#isPathParameter}}
-  {{&name}}: {{&flowType}},
+  {{&name}}: {{&flowType}}
+  ,
   {{/isPathParameter}}
   {{#isQueryParameter}}
-  {{&name}}: {{&flowType}},
+  {{&name}}: {{&flowType}}
+  ,
   {{/isQueryParameter}}
   {{/parameters}}
   end: ?any
