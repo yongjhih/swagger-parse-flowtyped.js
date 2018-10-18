@@ -8,7 +8,6 @@ require('yargs')
   .command('*', 'Generate', (yargs2) => {
   }, (argv) => {
       return stdin().then(str => JSON.parse(str)).then(str => {
-          console.log(str);
           console.log(codegen(parse({
               swagger: str,
               moduleName: 'swagger',
@@ -26,6 +25,6 @@ require('yargs')
   })
   .help('help')
   .fail((msg, err) => {
-    console.log(msg);
+    console.error(msg);
     console.error(err);
   }).argv;
