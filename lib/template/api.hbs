@@ -5,7 +5,7 @@ import {Axios} from 'axios';
 
 {{> types }}
 
-default export class {{&className}} {
+export default class {{&className}} {
   _axios: Axios => *;
 
   constructor(baseURL: string = "{{&domain}}") {

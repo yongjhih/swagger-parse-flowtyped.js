@@ -13,11 +13,11 @@
   {{#isPathParameter}}{{&name}}: {{&flowType}}{{/isPathParameter}}
   {{#isQueryParameter}}{{&name}}: {{&flowType}}{{/isQueryParameter}}
   {{/joinComma}}{{/if}}): Promise<{{&responseType}}> {
-  return this._axios.{{toLowerCase method}}(`{{&_path}}`{{#unless isGET}});{{/unless}}{{#if isGET}}{{#if queryParameters}}, {
+  return this._axios.{{toLowerCase method}}(`{{&_path}}`{{#unless isGET}}).then(res => res.data);{{/unless}}{{#if isGET}}{{#if queryParameters}}, {
     param: {
       {{#queryParameters}}
       {{&name}}: {{&name}},
       {{/queryParameters}}
     }
-  }{{/if}});{{/if}}
+  }{{/if}}).then(res => res.data);{{/if}}
 }
