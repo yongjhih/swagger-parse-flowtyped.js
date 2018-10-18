@@ -11,17 +11,10 @@
  */
 {{&methodName}}(
   {{#if parameters}}
-  {{#parameters}}
-  {{#isPathParameter}}
-  {{&name}}: {{&flowType}}
-  ,
-  {{/isPathParameter}}
-  {{#isQueryParameter}}
-  {{&name}}: {{&flowType}}
-  ,
-  {{/isQueryParameter}}
-  {{/parameters}}
-  end: ?any
+  {{#joinComma parameters}}
+  {{#isPathParameter}}{{&name}}: {{&flowType}}{{/isPathParameter}}
+  {{#isQueryParameter}}{{&name}}: {{&flowType}}{{/isQueryParameter}}
+  {{/joinComma}}
   {{/if}}
 ): Promise<{{&responseType}}> {
   return this._axios.{{toLowerCase method}}(`{{&_path}}`
