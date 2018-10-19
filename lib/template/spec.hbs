@@ -1,6 +1,6 @@
 it('should {{&methodName}}()', done => {
   {{#parameters}}
-  {{#isPathParameter}}const {{&name}} = {{&fakeValue}};{{/isPathParameter}}{{#isQueryParameter}}const {{&name}}: {{&flowType}} = {{&fakeValue}};{{/isQueryParameter}}
+  {{#isPathParameter}}const {{&name}} = {{&fakeValue}};{{/isPathParameter}}{{#isQueryParameter}}const {{&name}} = {{&fakeValue}};{{/isQueryParameter}}
   {{/parameters}}
 
   nock(`{{&baseURL}}`)
