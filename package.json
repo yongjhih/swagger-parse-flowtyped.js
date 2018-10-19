@@ -1,6 +1,6 @@
 {
   "name": "swagger-codegen-axios-flow",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "swagger-codegen-axios-flow",
   "main": "index.js",
   "author": "Andrew Chen <yongjhih@gmail.com>",

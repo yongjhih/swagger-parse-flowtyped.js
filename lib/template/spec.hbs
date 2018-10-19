@@ -10,7 +10,7 @@ it('should {{&methodName}}()', done => {
         {{#isQueryParameter}}{{&name}}: {{&name}}{{/isQueryParameter}}
         {{/joinComma}}{{/if}}
       })
-      .reply(200, {});
+      .reply(200, {{#if isResponseArray}}[]{{/if}}{{#unless isResponseArray}}{}{{/if}});
   {{&className}}Instance.{{&methodName}}({{#if parameters}}{{#joinComma parameters}}
   {{#isPathParameter}}{{&name}}{{/isPathParameter}}
   {{#isQueryParameter}}{{&name}}{{/isQueryParameter}}
