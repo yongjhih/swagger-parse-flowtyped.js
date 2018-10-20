@@ -1,7 +1,4 @@
 {
-  "presets": ["env", "flow"],
-  "plugins": [["flow-runtime", {
-      "assert": false,
-      "annotate": false
-  }], "transform-object-rest-spread", "transform-export-extensions"]
+  "presets": ["env"],
+  "plugins": ["transform-object-rest-spread"]
 }
