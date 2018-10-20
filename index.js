@@ -77,7 +77,7 @@ let getViewForSwagger2 = function (opts) {
         responseTitle: undefined,
         responseDescription: undefined,
         baseURL: data.domain,
-        isResponseArray: method.responses && method.responses['200'] && method.responses['200'].schema && method.responses['200'].schema.type == "array",
+        isResponseArray: false,
       }
 
       if (op.produces) {
@@ -171,6 +171,7 @@ let getViewForSwagger2 = function (opts) {
         method.responses['200'].schema &&
         method.responses['200'].schema.type &&
         method.responses['200'].schema.type == "array") {
+        method.isResponseArray = true;
         method.responseTypeDescription = method.responses['200'].schema.items.description;
         method.responseTypeTitle = method.responses['200'].schema.items.title;
         if (method.responses['200'].schema.items['$ref']) {
